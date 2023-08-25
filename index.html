@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>Counter App</title>
+	<style>
+
+		*{
+			font-family: Trebuchet MS;
+
+		}
+
+		header{
+			background-color: lightblue;
+			display: flex;
+			justify-content: space-between;
+			padding-left: 20px;
+			padding-right: 20px;
+			align-items: center;
+			flex-wrap: wrap;
+		}
+
+		p{
+			font-size: 30px;
+		}
+
+		ul{
+			display: flex;
+			
+		}
+
+		li{
+			padding: 20px;
+			list-style: none	;
+		}
+
+		a{
+			text-decoration: none;
+			font-size: 20px;
+		}
+	.counter-app{
+		     display: flex;
+		     flex-direction: column;
+		     align-items:center;
+	}
+
+	#number{
+		font-size: 100px;
+	}
+
+	button{
+		font-size: 60px;
+		width: 100px;
+		cursor: pointer	;
+	}
+
+
+
+
+		
+
+         
+	
+		
+	</style>
+</head>
+<body>
+
+	<header>
+		<h1>Counter App 🥰</h1>
+
+		<p> The brith place of counting</p>
+
+	</header>
+	<div class="counter-app">
+
+	<section >
+		<h1 id="number">0</h1>
+	</section>
+
+	<footer>
+		<button id="decrease">-</button>
+		<button id="increase">+</button>
+	</footer>
+</div>
+
+
+<script type="text/javascript">
+	 let numberElement = document.getElementById("number");
+    let decreaseButton = document.getElementById("decrease");
+    let increaseButton = document.getElementById("increase");
+
+    let currentNumber = 0;
+
+    decreaseButton.addEventListener("click", () => {
+      if (currentNumber > 0) {
+        currentNumber -= 1;
+        updateNumber();
+      }
+    });
+
+    increaseButton.addEventListener("click", () => {
+      currentNumber += 1;
+      updateNumber();
+    });
+
+    function updateNumber() {
+      numberElement.innerText = currentNumber;
+    }
+
+</script>
+
+</body>
+</html>
